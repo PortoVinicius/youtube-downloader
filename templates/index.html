@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YouTube Downloader</title>
+</head>
+
+<body>
+
+<h1>Baixar Música do YouTube</h1>
+
+<form method="POST">
+<input type="text" name="url" placeholder="Cole o link do vídeo" size="50" required>
+<button type="submit">Baixar MP3</button>
+</form>
+
+{% if filename %}
+
+<p>Download pronto:</p>
+
+<a href="/download/{{filename}}">Baixar {{filename}}</a>
+
+{% endif %}
+
+</body>
+</html>
